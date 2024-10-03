@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        color: whitesmoke
+      }
+      h1,
+      h2 {
+        text-align: center;
+      }
+      h2 {
+        font-size: 75px;
+        letter-spacing: 20px;
+      }
+      button {
+        padding: 20px 25px;
+        background-color: rgb(14, 141, 220);
+        color: white;
+        transition: 250ms;
+        border-radius: 8px;
+        border: none;
+      }
+      button:hover {
+        background-color: rgb(0, 89, 149);
+        color: white;
+        transition: 250ms;
+      }
+      .flex {
+        display: flex;
+      }
+      .justify {
+        justify-content: center;
+      }
+      .flex-column {
+        flex-direction: column;
+      }
+
+      .clock-font {
+        font-family: "Signika", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-variation-settings: "GRAD" 0;
+      }
+      .clock-window {
+        padding: 40px 60px;
+        margin: auto;
+        width: 75%;
+        background: rgba(56, 124, 212, 0.35);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(6px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
+      #grad {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: linear-gradient(
+          to bottom right,
+          rgb(0, 60, 255),
+          rgb(2, 48, 116)
+        );
+      }
+
+      .margin-bottom {
+        margin-bottom: 5vh;
+      }
+      .width-75 {
+        width: 75%;
+      }
+      #square {
+        width: 100px;
+        height: 100px;
+        background: rgb(244, 148, 31);
+        position: absolute;
+        top:48vh;
+        right: 25vh;
+      }
+
+      #circle {
+        width: 100px;
+        height: 100px;
+        background: rgba(11, 195, 152, 0.795);
+        border-radius: 50%;
+        position: absolute;
+        bottom:48vh;
+        left: 25vh;
+      }
+      #triangle-up {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid rgb(204, 0, 255);
+        position: absolute;
+        top: 44vh;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="grad">
+      <div id="square"></div>
+      <div id="triangle-up"></div>
+      <div id="circle"></div>
+      <div class="justify flex flex-column margin-bottom width-75">
+        <h1 style="font-size: 50px;" class="margin-bottom">Digital Time Clock</h1>
+        <div class="clock-window">
+          <h2 class="clock-font" id="time"></h2>
+        </div>
+      </div>
+      <div class="flex justify">
+        <button id="button">Switch to 12 Hour Format</button>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
