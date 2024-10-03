@@ -123,15 +123,6 @@
           padding: 8px 10px;
           font-size: 5px;
         }
-        #circle {
-          bottom: 42vh;
-        }
-        #square {
-          top: 42vh;
-        }
-      }
-
-      @media only screen and (max-width: 650px) {
         #grad {
           height: 100vh;
         }
@@ -144,6 +135,7 @@
         .clock-font {
           font-weight: 50;
         }
+
         h2 {
           font-size: 12px;
           letter-spacing: 4px;
@@ -163,10 +155,7 @@
           border: 1px solid rgba(255, 255, 255, 0.18);
           z-index: 999;
         }
-        button {
-          z-index: 999;
-          padding: 5px 8px;
-        }
+
         #square {
           width: 50px;
           height: 50px;
@@ -193,6 +182,58 @@
           border-bottom: 50px solid rgb(204, 0, 255);
           position: absolute;
           top: 42vh;
+        }
+      }
+
+      @media only screen and (max-width: 650px) {
+
+        h2 {
+          font-size: 10px;
+          letter-spacing: 4px;
+        }
+        h1 {
+          font-size: 10px;
+        }
+        .clock-window {
+          padding: 15px 25px;
+        }
+        button {
+          z-index: 999;
+          padding: 5px 8px;
+        }
+        #square{
+          width: 25px;
+          height: 25px;
+
+        }
+        #circle{
+          width: 25px;
+          height: 25px;
+
+        }
+        #triangle-up{
+          border-left: 25px solid transparent;
+          border-right: 25px solid transparent;
+          border-bottom: 25px solid rgb(204, 0, 255);
+        }
+        
+      }
+      @media only screen and (max-width: 450px) {
+        #square{
+          top: 48vh;
+          right: 13vh;
+        }
+        #circle{
+          bottom: 48vh;
+          left: 13vh;
+        }
+        #triangle-up{
+          position: absolute;
+          top: 48vh;
+        }
+        button{
+          padding: 5px 8px;
+          width: 75%;
         }
       }
     </style>
