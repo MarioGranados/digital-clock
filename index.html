@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap"
       rel="stylesheet"
     />
+
     <style>
       * {
         padding: 0;
@@ -115,7 +116,21 @@
         top: 44vh;
       }
 
-      /* Media stuff */
+      /* Media stuff and viewports */
+      @media only screen and (max-width: 760px) {
+        button {
+          width: 10vh;
+          padding: 8px 10px;
+          font-size: 5px;
+        }
+        #circle {
+          bottom: 42vh;
+        }
+        #square {
+          top: 42vh;
+        }
+      }
+
       @media only screen and (max-width: 650px) {
         #grad {
           height: 100vh;
@@ -177,20 +192,6 @@
           border-right: 50px solid transparent;
           border-bottom: 50px solid rgb(204, 0, 255);
           position: absolute;
-          top: 42vh;
-        }
-      }
-
-      @media only screen and (max-width: 760px) {
-        button {
-          width: 10vh;
-          padding: 8px 10px;
-          font-size: 5px;
-        }
-        #circle {
-          bottom: 42vh;
-        }
-        #square {
           top: 42vh;
         }
       }
